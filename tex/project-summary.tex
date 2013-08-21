@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[palatinofont10]{nsfprop}
+
+\thispagestyle{empty}
+\pagenumbering{arabic}
+\begin{document}
+
+\begin{center}
+\textbf{Combining Narrative-Based Representations and Model-Checking for Robust Supervised Autonomy}
+\end{center}
+
+The concept of narrative applies to human-machine systems because it
+(a) enables an explicit representation for interactions between
+actors, (b) is amenable to formal modeling, and (c ) is compatible
+with summaries that enable human understanding. The explicit
+representation of narrative in emerging systems produces interactive
+systems that are engaging to humans and compatible with the ways
+humans understand and predict complex behaviors. Moreover, a narrative
+framework is a natural way to consider how the activities of one agent
+constrain or influence the activities of another, allowing a formalism
+for analyzing how different roles affect a mission.
+
+Three elements of narrative-based systems enable robust human-machine
+interaction: First, there exist good techniques for representing
+narratives, including automata-based representations for encoding
+operator intent. Second, a narrative can be represented as a
+trajectory through a state space of possible situations. A mission is
+a planned trajectory through a state space, with agent choices and
+environment input alternative trajectories. Third, narrative-based
+systems support flexible allocations of authority and autonomy, thus
+allowing distributed humans and machines to robustly perform a
+mission.
+
+We propose two classes of models. First, we propose to use
+(deterministic) timed automata to explicitly represent the set of
+possible behaviors of agents in the system. This builds on our
+previous work (Modeling UASs for Role Fusion and Human Machine
+Interface Optimization; Proc of IEEE Conf on Sys, Man, and
+Cybernetics, 2013). These timed automata are appropriate for
+human-machine interaction because they implicitly represent the set of
+afforded behaviors of the team.
+
+Second, we propose to use Markov chains to represent likely outcomes
+of agent behaviors. Systems that operate in the real environment with
+real humans must be robust to deviations from a deterministic
+plan. Probabilistic models allow us to quantify performance bounds as
+a function of level of uncertainty and to inform a human operator of
+the level of persistence required to produce a robust outcome
+(Abstraction and Persistence: Macro-Level Guarantees of Collective
+Bio-Inspired Teams under Human Supervision; Proc of
+Infotech@Aerospace, 2012).
+
+Model checking is particularly effective in isolating violations of
+system-level properties. A user posing "what-if" scenarios is able to
+assess possible outcomes and quickly isolate trajectories that enter
+high-risk, high workload, or failure situations. The proposed
+verification approaches will (a) use symbolic execution and SMT
+technology to manage state explosion and (b) leverage advances in
+probabilistic analysis to express bounds on high-risk
+trajectories. This yields the ability to detect and predict problems,
+with guidance on how to mediate these problems.
+
+Narrative-based representations provide a comprehensible and flexible
+way to explore agent behaviors and interactions with their environment
+over time and from different perspectives of inquiry. We propose to
+use narrative-based performance summaries, building on work by the
+proposers for remote supervision of NASA planetary robots (NASA Phase
+II STTR. Anytime Summarization for Remote Robot Operations). These
+summaries orient personnel quickly about the performance of remote
+agents performing complex tasks with variable levels of
+autonomy. Summary measures identify what progress the agents have made
+and, when progress is impeded, indicate what went wrong. Trending
+measures determine how well agent assets are being utilized, identify
+opportunities to improve agent productivity, and detect impacts to
+productivity resulting from degraded agent capabilities. Key to our
+approach is the ability to summarize important differences between
+actual performance and performance expectations.
+\paragraph{Keywords:\/} ???ADD KEYWORDS???
+
+\end{document}
