@@ -1,0 +1,63 @@
+Narrative-based representations provide a comprehensible and flexible
+way to explore agent behaviors and interactions with their environment
+over time and from different perspectives of inquiry. We propose to
+use narrative-based performance summaries, building on work by the
+proposers for remote supervision of NASA planetary robots (NASA Phase
+II STTR. “Anytime Summarization for Remote Robot Operations”,
+Schreckenghost/TRACLabs). These summaries orient personnel quickly
+about the performance of remote agents performing complex tasks with
+variable levels of autonomy. Summary measures identify what progress
+the agents have made and, when progress is impeded, indicate what went
+wrong. Trending measures determine how well agent assets and resources
+are being utilized, identify opportunities to improve agent
+performance, and detect impacts to performance resulting from degraded
+agent capabilities. Key to our approach is the ability to summarize
+important differences between actual performance and performance
+expectations.
+
+For the NAS we will investigate performance-based abstractions to
+support narrative interaction about the consequences of anomalous
+events involving Unmanned Aircraft Systems (UAS) and the actions taken
+in response to these events. Anomalous events with consequences can
+include (1) system failure, (2) human error, (3) automation error, (4)
+human threat (such as terrorism), (5) environmental threat (e.g.,
+weather), and (6) infrastructure problem (e.g., unavailable
+runway). The abstraction of consequences can be summative, describing
+how we have reached the current situation, or projective, predicting
+what is expected should mitigating actions be taken. These
+abstractions will support Air Traffic Controllers (ATCs) and pilots in
+choosing both what action to take and when to take action. These
+abstractions also will define the concepts of discourse and the
+importance of these concepts when the UAS (both piloted and
+autonomous) interacts with the ATC and pilot. Because a single
+anomalous event can affect multiple UASs and crewed aircraft, it is
+necessary to support abstraction for different participant roles
+(e.g., the UASs, the ATCs, and the pilots). It also is necessary to
+support abstraction for different levels of UAS autonomy, because
+these differences in autonomy change the roles and responsibilities of
+both the pilot and the UAS.
+
+Performance measures will abstract consequences for each UAS (referred
+to as agent below) as the impacts of anomalous events and their
+mitigating actions from the following perspectives:
+\begin{itemize}
+\item	Mission/flight Success: Are critical milestones in the flight plan achieved as expected?  If not, how significant is the deviation?
+\item	Margin or Buffer: Are margins in altitude, vehicle separation, and fuel level decreasing at an exceptional rate?  
+\item	Utilization of Airspace and Runways: Does the density and separation of agents and other vehicles in the airspace approach acceptable limits? Are exclusion zones in the airspace threatened? Does time between takeoff and landing for each runway approach safety limits?
+\item	Vehicle Functionality and Integrity: Do events or actions affect critical functionality needed to follow the plan? If so, are alternative capabilities available?  
+\item	Human Safety: Do events or actions increase risk of collision in air or on landing? 
+Because of shared airspace, runways, and other airport facilities and services, events affecting one agent can have consequences on other agents. We will propagate the impacts of events and mitigating actions affecting one agent to other agents in the airspace or airports.
+\end{itemize}
+
+We will compare the performance of each agent to expected or desired
+performance (e.g., flight plan, vehicle separation, fuel level,
+etc.). These expectations can change as the situation changes. When
+performance deviates from expectations, the consequences of the
+deviation and their importance will be predicted. These consequences
+can include delayed landing, increased backlog at airport, and
+increased threat of in-air collision, or unsafe takeoff or landing. We
+also will support predicting performance improvements when mitigating
+action is taken. Algorithms for abstracting consequences using
+performance measures will combine data about active flights with
+model-based predictions and expectations based on acceptable flight
+performance.

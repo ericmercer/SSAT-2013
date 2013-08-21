@@ -1,0 +1,73 @@
+Three elements of of narrative-based systems enable robust
+human-machine interaction: First, there exist good techniques for
+representing narratives, including automata-based representations for
+encoding operator intent.  Second, a narrative can be represented as a
+trajectory through a state space of possible situations.  A mission is
+a planned trajectory through a state space, with agent choices and
+environment input alternative trajectories. Third, narrative-based
+systems support flexible allocations of authority and autonomy, thus
+allowing distributed humans and machines to robustly perform a
+mission.
+
+We propose two classes of models.  First, we propose to use
+(deterministic) timed automata to explicitly represent the set of
+possible behaviors of agents in the system.  This builds on our
+previous work (Modeling UASs for Role Fusion and Human Machine
+Interface Optimization; Gledhill, Mercer, \& Goodrich, Proc of IEEE
+Conf on Sys, Man, and Cybernetics, 2013).  These timed automata are
+appropriate for human-machine interaction because they implicitly
+represent the set of afforded behaviors of the team.
+
+Second, we propose to use Markov chains to represent likely outcomes
+of agent behaviors.  Systems that operate in the real environment with
+real humans must be robust to deviations from a deterministic plan.
+Probabilistic models allow us to quantify performance bounds as a
+function of level of uncertainty and to inform a human operator of the
+level of persistence required to produce a robust outcome (Abstraction
+and Persistence: Macro-Level Guarantees of Collective Bio-Inspired
+Teams under Human Supervision; Goodrich \& Mercer, Proc of
+Infotech@Aerospace, 2012).
+
+Model checking is particularly effective in isolating violations of
+system-level properties. A user posing "what-if" scenarios is able to
+assess possible outcomes and quickly isolate trajectories that enter
+high-risk, high workload, or failure situations. The proposed
+verification approaches will (a) use symbolic execution and SMT
+technology to manage state explosion and (b) leverage advances in
+probabilistic analysis to express bounds on high-risk
+trajectories. This yields the ability to detect and predict problems,
+with guidance on how to mediate these problems.
+
+\textbf{Eric, I think that the key elements for your writing derive from the following excerpts from the call:}
+
+The focus should be on human-human as well as human-automation
+interactions and the exploration of off-nominal scenarios that can
+emerge from these interactions. It is important to take into account
+the stochastic elements of the NAS. For example, the analyses of
+interest could include the following, non-exhaustive list of
+off-nominal scenarios:
+\begin{itemize}
+\item Misunderstandings due to mixed equipage
+\item Sudden deviations from planned trajectories due to exceptional circumstances 
+such as unexpected pilot actions or unexpected critical hardware or software 
+failures
+\item Safety issues resulting from overly competitive behaviors or from gamesmanship.
+\end{itemize}
+
+In particular this solicitation seeks techniques that can handle stochastic events and 
+emerging behaviors. The techniques of interest include:
+\begin{itemize}
+\item Game theory: in particular for modeling human aspects involved in decision 
+making between humans, but in the context of interaction with some automation.
+\item Bayesian analysis: for modeling probability propagation throughout a graph of 
+modeling interactions between human and automated agents.
+\item Learning and coordination in multi-agent systems: for capturing the evolution of 
+human behaviors over time and especially the learning of specific situations and 
+the optimization or simplification of procedures in air traffic that can lead to 
+confusion for other agents
+\end{itemize}
+
+The idea would be to state what can and can’t be done using existing
+techniques in model-checking, leading to the idea of extramodel
+information and the need for constrained negotiation.  State what is
+unique about our approach.
